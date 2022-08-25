@@ -1,5 +1,7 @@
+import { Component } from "react";
 
-const Navbar = () => {
+
+const Navbar = ( {children} ) => {
 
 return(
 <nav class="navbar navbar-expand-lg bg-light">
@@ -32,8 +34,10 @@ return(
       </ul>
     </div>
   </div>
+  {children}
 </nav>
 );
 }
 
 export default Navbar
+

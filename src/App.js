@@ -1,10 +1,17 @@
 
-import './App.css';
+import './App.scss';
 import Navbar from './components/Navbar'
+import CartWidget from "./components/CartWidget";
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
-    <Navbar/>
+    <div>
+    <Navbar>
+      <CartWidget/>
+    </Navbar>
+    <ItemListContainer/>
+    </div>
   );
 }
 
