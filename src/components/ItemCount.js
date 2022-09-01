@@ -1,11 +1,10 @@
 import { Component } from "react";
 import { useState } from "react";
 
-const ItemCount = () => {
+const ItemCount = ({stock}) => {
 
     const [counter, setCounter] = useState(1)
 
-let stock = 10
 
 const handleAdd = () => {
     if (counter < stock) {
@@ -26,7 +25,7 @@ const handleSubstract = () => {
             <button onClick={handleSubstract} className="botonStock btn btn-secondary">-</button>
             <button onClick={handleAdd} className="botonStock btn btn-primary">+</button>
             <br/>
-            <button className="botonCarrito btn btn-outline-primary">Agregar al carrito</button>
+            <button className="botonCarrito btn btn-outline-primary" disabled={stock=0}>Agregar al carrito</button>
             <p>Stock disponible: {stock}</p>
         </div>
     )
