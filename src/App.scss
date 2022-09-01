@@ -43,7 +43,7 @@
 
     .botonStock{
       width: 40%;
-      margin: 10px;
+      margin: 10px auto;
     }
 
     .botonCarrito{
@@ -61,4 +61,8 @@
 
     .fotoCard{
       height: 25rem
+    }
+
+    .tituloCard{
+      text-align: center;
     }

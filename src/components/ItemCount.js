@@ -19,13 +19,13 @@ const handleSubstract = () => {
 }
 
     return(
-        <div>
-            <h5>Selecciona la cantidad</h5>
-            <p className="agregarCantidad">{counter}</p>
-            <button onClick={handleSubstract} className="botonStock btn btn-secondary">-</button>
-            <button onClick={handleAdd} className="botonStock btn btn-primary">+</button>
+        <div className ="row">
+            <h5 className=" tituloCard col-12">Selecciona la cantidad</h5>
+            <p className="agregarCantidad col-12 ">{counter}</p>
+            <button onClick={handleSubstract} className=" col-6 botonStock btn btn-secondary">-</button>
+            <button onClick={handleAdd} className="col-6 botonStock btn btn-primary">+</button>
             <br/>
-            <button className="botonCarrito btn btn-outline-primary" disabled={stock=0}>Agregar al carrito</button>
+            <button className="col-12 botonCarrito btn btn-outline-primary" disabled={stock=0}>Agregar al carrito</button>
             <p>Stock disponible: {stock}</p>
         </div>
     )
