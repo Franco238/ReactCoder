@@ -58,7 +58,7 @@ const ItemListContainer = () => {
                 } else {
                     reject("Hubo un error")
                 }
-            }, 5000)
+            }, 2000)
         })
     }
 
