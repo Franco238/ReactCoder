@@ -54,18 +54,12 @@
 
 
 
-    .tarjetaProduct{
-      height: 50rem;
-      margin: auto;
-    }
 
     .fotoCard{
       height: 25rem
     }
 
-    .tituloCard{
-      text-align: center;
-    }
+
 
     .fotoBanner{
       height: 30rem;
@@ -77,3 +71,13 @@
       width: 80%;
     }
 
+    .listaProductos{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cardDetail{
+      margin: auto;
+    }
