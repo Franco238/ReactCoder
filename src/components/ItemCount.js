@@ -25,7 +25,7 @@ const handleSubstract = () => {
             <button onClick={handleSubstract} className=" col-6 botonStock btn btn-secondary">-</button>
             <button onClick={handleAdd} className="col-6 botonStock btn btn-primary">+</button>
             <br/>
-            <button className="col-12 botonCarrito btn btn-outline-primary" disabled={stock=0}>Agregar al carrito</button>
+            <button className="col-12 botonCarrito btn btn-outline-primary" disabled= {stock == 0}>Agregar al carrito</button>
             <p>Stock disponible: {stock}</p>
         </div>
     )

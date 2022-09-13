@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import PedirDatos from "../pedirDatos/pedirDatos"
 import { useParams } from 'react-router-dom'
 import ItemDetail from "../ItemDetail/ItemDetail"
+import Spinner from 'react-bootstrap/Spinner';
 
 const ItemDetailContainer = () => {
 
@@ -26,10 +27,12 @@ const ItemDetailContainer = () => {
     }, [])
 
     return (
-        <div>
+        <div className="cardDetail">
             {
                 loading
-                ? <h2>Loading...</h2>
+                ? <section className="spinner">
+                <Spinner animation="grow" />
+                </section>
                 : <ItemDetail item={item} />
             }
             

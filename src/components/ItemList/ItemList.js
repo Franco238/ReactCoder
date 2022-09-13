@@ -7,8 +7,10 @@ const ItemList = ( {productos = []} ) => {
         <div className="container my-5">
             <h2>Productos</h2>
             <hr/>
-
+            <section className="listaProductos">
             { productos.map((prod) => <Item producto={prod} key={prod.id}/>)}
+            </section>
+            
         </div>
     )
 }

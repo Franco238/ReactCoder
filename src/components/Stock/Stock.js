@@ -35,7 +35,7 @@ const stock = [
 
     {
         id: 4,
-        nombre: "Buzo de entrenamiento AFA 2022",
+        nombre: "Buzo de entrenamiento",
         description: "Buzo de entrenamiento celeste oficial de la seleccion argentina 2022",
         img: "https://media.tycsports.com/files/2022/08/11/463954/el-nuevo-buzo-de-entrenamiento-de-la-seleccion-argentina-para-qatar-2022_416x555.webp",
         price: "15000",

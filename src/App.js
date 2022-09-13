@@ -1,8 +1,7 @@
 
 import './App.scss';
 import Navbar from './components/Navbar'
-import CartWidget from "./components/CartWidget";
-import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
