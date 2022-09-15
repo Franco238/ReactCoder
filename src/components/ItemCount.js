@@ -1,19 +1,21 @@
 import { Component } from "react";
 import { useState } from "react";
-
-const ItemCount = ({stock}) => {
-
-    const [counter, setCounter] = useState(1)
+import { Link } from 'react-router-dom'
 
 
-const handleAdd = () => {
-    if (counter < stock) {
-        setCounter(counter + 1)
+const ItemCount = ({stock, counter, setCounter, handleAgregar}) => {
+
+
+
+
+    const handleAdd = () => {
+        if (counter < stock) {
+            setCounter(counter + 1)
+        }
     }
-}
 
 const handleSubstract = () => {
-    if (counter > 0) {
+    if (counter > 1) {
         setCounter(counter - 1)
     }
 }
@@ -25,7 +27,8 @@ const handleSubstract = () => {
             <button onClick={handleSubstract} className=" col-6 botonStock btn btn-secondary">-</button>
             <button onClick={handleAdd} className="col-6 botonStock btn btn-primary">+</button>
             <br/>
-            <button className="col-12 botonCarrito btn btn-outline-primary" disabled= {stock == 0}>Agregar al carrito</button>
+            <Link to={`/CartWidget`} onClick={handleAgregar} className="col-12 botonCarrito btn btn-outline-primary" disabled= {stock == 0}>Agregar al carrito</Link>
+            {/* <button onClick={handleAgregar} className="col-12 botonCarrito btn btn-outline-primary" disabled= {stock == 0}>Agregar al carrito</button> */}
             <p>Stock disponible: {stock}</p>
         </div>
     )

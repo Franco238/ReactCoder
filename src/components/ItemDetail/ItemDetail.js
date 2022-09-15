@@ -1,9 +1,22 @@
+import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import ItemCount from '../ItemCount';
 
 
 const ItemDetail = ({item}) => {
+
+  const [cantidad, setCantidad] = useState(1)
+
+  const handleAgregar = () => {
+            console.log(
+            {...item,
+            cantidad
+        }
+            
+        )
+    }
+
 
 
     return (
@@ -25,7 +38,12 @@ const ItemDetail = ({item}) => {
                 <ul>{item.category}</ul>
               </ul>
               
-                <ItemCount stock={item.stock}/>
+                <ItemCount 
+                stock={item.stock}
+                counter={cantidad}
+                setCounter={setCantidad}
+                handleAgregar={handleAgregar}
+                />
                 </section>
                 
             
