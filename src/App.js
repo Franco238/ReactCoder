@@ -7,12 +7,21 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Historia from './components/Historia/Historia';
 import Contacto from './components/Contacto/Contacto';
+import {CartProvider } from './components/Contexto/CartContext';
+import Cart from './components/Cart/Cart';
 
-function App() {
+
+
+const App = () => {
+
+
   return (
+
 
     
     <div>
+
+      // <CartProvider>
 
 
 <BrowserRouter>
@@ -22,7 +31,7 @@ function App() {
             <Route path='/' element={ <ItemListContainer/> }/>
             <Route path='/productos/:categoryId' element={<ItemListContainer/>} />
             <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
-
+            <Route path='/cart' element={<Cart/>}/>
             <Route path="/historia" element={<Historia/>}/>
             <Route path="/contacto" element={<Contacto/>}/>
             
@@ -33,7 +42,7 @@ function App() {
           {/* <Footer/> */}
       </BrowserRouter>
 
-
+      </CartProvider>
 
 
     

@@ -1,22 +1,29 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../Contexto/CartContext';
 import ItemCount from '../ItemCount';
 
 
 const ItemDetail = ({item}) => {
 
+  const {cart, addToCart, isInCart} = useContext(CartContext)
+  console.log(cart)
+
   const [cantidad, setCantidad] = useState(1)
 
   const handleAgregar = () => {
-            console.log(
-            {...item,
-            cantidad
-        }
-            
-        )
-    }
+            const itemToCart = {
+              id: item.id,
+              precio: item.price,
+              nombre: item.nombre,
+              cantidad
 
+            }
+            console.log(isInCart(item.id))
+            addToCart(itemToCart)
+        }
 
 
     return (
@@ -38,13 +45,22 @@ const ItemDetail = ({item}) => {
                 <ul>{item.category}</ul>
               </ul>
               
+              {
+                isInCart(item.id)
+                ?
+                <Link to="/cart" className='btn btn-primary my-2'>Finalizar mi compra</Link>
+                :
                 <ItemCount 
                 stock={item.stock}
                 counter={cantidad}
                 setCounter={setCantidad}
                 handleAgregar={handleAgregar}
                 />
+              }
+                
                 </section>
+
+                
                 
             
         </div>
